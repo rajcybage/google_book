@@ -61,10 +61,8 @@
    <code>b.books.first.publish_date #get the first book published date</code><br/>
    <code>b.books.first.preview_link #get the first book preview link</code><br/>
    <code>b.books.first.info_link #get the first book information</code><br/>
-   <code>b.books.first.preview_link #get the first book preview link</code><br/>
-   <code>b.books.first.info_link #get the first book information link</code><br/>
-   <code>b.books.first.thubnail_image #get the first book thumbnail image</code><br/>
-   <code>b.books.first.small_thubnail_link #get the first book thumbnail image</code><br/>
+   <code>b.books.first.thumbnail_image #get the first book thumbnail image</code><br/>
+   <code>b.books.first.small_thumbnail_link #get the first book thumbnail image</code><br/>
 </div>
 
     <h3>Many other new functionalities are comming soon.....</h3>
