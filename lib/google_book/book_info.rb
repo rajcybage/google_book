@@ -18,7 +18,6 @@ class BookInfo
   end
   
   #return all the subtitles
-
   def get_all_sub_titles
     @subtitles = []
     @items[:items].each do |item|

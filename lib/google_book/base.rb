@@ -41,7 +41,7 @@ module GoogleBook
     def books
       @books = []
       @items.each do |item|
-       @books << BookItem.new(item: item)
+        @books << BookItem.new(item: item)
       end
       return @books
     end

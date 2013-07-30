@@ -25,11 +25,11 @@ class BookItem
   end
 
   def preview_link
-   @item[:item]["volumeInfo"]["previewLink"]
+    @item[:item]["volumeInfo"]["previewLink"]
   end
 
   def info_link
-   @item[:item]["volumeInfo"]["infoLink"]
+    @item[:item]["volumeInfo"]["infoLink"]
   end
 
   def canonical_volume_link
@@ -37,11 +37,18 @@ class BookItem
   end
 
   def thubnail_image
-   @item[:item]["volumeInfo"]["imageLinks"]["thumbnail"]
+    @item[:item]["volumeInfo"]["imageLinks"]["thumbnail"]
   end
 
   def small_thumbnail_link
-   @item[:item]["volumeInfo"]["imageLinks"]["smallThumbnail"]
+    @item[:item]["volumeInfo"]["imageLinks"]["smallThumbnail"]
   end
 
+  def pagecount
+    @item[:item]["volumeInfo"]["pageCount"]
+  end
+
+  def web_reader_link
+    @item[:item]["accessInfo"]["webReaderLink"]
+  end
 end
