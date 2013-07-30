@@ -44,26 +44,28 @@
    <code> b.search("Name of the book you want to search",1)</code> <br/> 
    <code>b.book_info.get_titles #to get the all titles of your search book</code> <br/> 
    <code>b.book_info.get_subtitles # to get all the subtitles of your search book</code>
-
+   
    </p>
-<h2>If you want to see each and every books</h2>
+
+
+</div>
+
+<h2>If you want to access each and every book as an instance of book</h2>
 <p>you can then create a instance of books which was getting by search by following ways</p>
 <div>
    <code>b=GoogleBook::Book.new(:api_key => "YOUR_GOOOGLE_API_KEY")</code> <br/>
    <code> b.search("Name of the book you want to search",1)</code> <br/>
-   <code>b.books #create the instance of all the books of your search</b>
-   <code>b.books.first.get_title #get the first book title</code>
-   <code>b.books.first.get_sub_title#get the first book sub title</code>
-   <code>b.books.first.authors #get the first book authors</code>
-   <code>b.books.first.publish_date #get the first book published date</code>
-   <code>b.books.first.preview_link #get the first book preview link</code>
-   <code>b.books.first.info_link #get the first book information</code>
-   <code>b.books.first.preview_link #get the first book preview link</code>
-   <code>b.books.first.info_link #get the first book information link</code>
-   <code>b.books.first.thubnail_image #get the first book thumbnail image</code>
-   <code>b.books.first.small_thubnail_link #get the first book thumbnail image</code>
-</div>
-<p></p>
+   <code>b.books #create the instance of all the books of your search</code><br/>
+   <code>b.books.first.get_title #get the first book title</code><br/>
+   <code>b.books.first.get_sub_title#get the first book sub title</code><br/>
+   <code>b.books.first.authors #get the first book authors</code><br/>
+   <code>b.books.first.publish_date #get the first book published date</code><br/>
+   <code>b.books.first.preview_link #get the first book preview link</code><br/>
+   <code>b.books.first.info_link #get the first book information</code><br/>
+   <code>b.books.first.preview_link #get the first book preview link</code><br/>
+   <code>b.books.first.info_link #get the first book information link</code><br/>
+   <code>b.books.first.thubnail_image #get the first book thumbnail image</code><br/>
+   <code>b.books.first.small_thubnail_link #get the first book thumbnail image</code><br/>
 </div>
 
     <h3>Many other new functionalities are comming soon.....</h3>
