@@ -2,7 +2,7 @@ require './lib/google_book/version.rb'
 Gem::Specification.new do |s|
   s.name        = 'google_book'
   s.version     = GoogleBook::Version
-  s.date        = '2013-07-07'
+  s.date        = '2013-07-30'
   s.summary     = "Google Book API integration"
   s.description = "Integrate the google book api into your app"
   s.authors     = ["Rajarshi Das"]
