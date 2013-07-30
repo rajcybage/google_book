@@ -1,4 +1,3 @@
-<!DOCTYPE>
 <html>
 <head>
 <title>Google Book API Integration</title>
