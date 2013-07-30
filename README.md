@@ -3,7 +3,7 @@
 <title>Google Book API Integration</title>
 </head>
 <body>
-	<h1>Google Book Api Integration</h1>
+	<h1>Google Book ApI Integration</h1>
 	<br/>
 <div>
 	<h2>Installation</h2>
