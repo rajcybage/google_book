@@ -16,14 +16,14 @@
 </div>
 <div>
  <h2>System Requirements</h2>
- <code>Ruby >= 1.9.3</code>
+ <code>Ruby >= 1.9.3 or jruby >=1.7.x</code>
 </div> 
 
 <div>
  <h2>Usage</h2>
  <p>
  <code>
-   b=GoogleBook::Book.new
+   b=GoogleBook::Book.new(:api_key => "YOUR_GOOOGLE_API_KEY")
  </code><br/>
  <code>
    b.search("Name of the book you want to search",type) #type should be a number
@@ -40,7 +40,7 @@
    </li>
   </ul>
   <p>
-   <code>b=GoogleBook::Book.new</code> <br/> 
+   <code>b=GoogleBook::Book.new(:api_key => "YOUR_GOOOGLE_API_KEY")</code> <br/>
    <code> b.search("Name of the book you want to search",1)</code> <br/> 
    <code>b.book_info.get_titles #to get the all titles of your search book</code> <br/> 
    <code>b.book_info.get_subtitles # to get all the subtitles of your search book</code>  

@@ -6,10 +6,19 @@ require_relative 'book_info.rb'
 
 module GoogleBook
 OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE	
-API_KEY = "AIzaSyD82ugogyUN7bAZ4k2UaLlVCep5NxZVYNM"
+
  class Book
-   attr_accessor :total_count, :items
- 
+   attr_accessor :api_key, :total_count, :items
+
+   def initialize(api_key)
+     unless api_key.nil?
+      @api_key = api_key[:api_key]
+     else
+       raise "Api key can not be nil. Please given your api_key"
+     end
+   end
+
+   #Google books search
    def search(query,type = nil)
    	checking_type(type)
    	type = set_type(type) unless type.nil?
@@ -17,15 +26,19 @@ API_KEY = "AIzaSyD82ugogyUN7bAZ4k2UaLlVCep5NxZVYNM"
       puts 'Enter the text to search'
       text = gets 
    	end	
-   	puts JSON.parse(connect_google("AIzaSyD82ugogyUN7bAZ4k2UaLlVCep5NxZVYNM",type,query))
-   	@total_count = JSON.parse(connect_google("AIzaSyD82ugogyUN7bAZ4k2UaLlVCep5NxZVYNM",type,query))["totalItems"]
-   	@items = JSON.parse(connect_google("AIzaSyD82ugogyUN7bAZ4k2UaLlVCep5NxZVYNM",type,query))["items"]
+   	puts JSON.parse(connect_google(@api_key,type,query))
+   	@total_count = JSON.parse(connect_google(@api_key,type,query))["totalItems"]
+   	@items = JSON.parse(connect_google(@api_key,type,query))["items"]
    end	
     
    def book_info
    	  BookInfo.new(items: @items)
    end 
-   
+
+   #use for rails application
+   def api_key
+     @api_key = YAML.load_file("#{Rails.root}/config/api_key_google_book.yml")[Rails.env]
+   end
 
    
    def checking_type(type)
@@ -68,7 +81,7 @@ API_KEY = "AIzaSyD82ugogyUN7bAZ4k2UaLlVCep5NxZVYNM"
    end
 
    def url_formation(api_key,type,search_param)
-      url = "https://www.googleapis.com/books/v1/volumes?q=#{search_param}+#{type}:keyes&key=#{api_key}"
+      url = "https://www.googleapis.com/books/v1/volumes?q=#{search_param}+#{type}:keyes&key=#{@api_key}"
       puts "#{url}"
       return URI(url)
    end	
