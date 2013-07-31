@@ -29,13 +29,14 @@
  </code>
  </p>
   <ul>
-   <li> type=1 ===> intitle: Returns results where the text following this keyword is found in the title.</li>
-   <li> type=2  ===> inauthor: Returns results where the text following this keyword is found in the author.</li>
-   <li> type=3 ====> inpublisher: Returns results where the text following this keyword is found in the publisher.</li>
-   <li>type=4 ===> subject: Returns results where the text following this keyword is listed in the category list of the volume.</li>
-   <li>type=5 ====>isbn: Returns results where the text following this keyword is the ISBN number.</li>
-   <li>ltype=6 ====> ccn: Returns results where the text following this keyword is the Library of Congress Control Number.</li>
-   <li>type =7 ===> oclc: Returns results where the text following this keyword is the Online Computer Library Center number.
+   <li> type = 1 ===> intitle: Returns results where the text following this keyword is found in the title.</li>
+   <li> type = 2  ===> inauthor: Returns results where the text following this keyword is found in the author.</li>
+   <li> type = 3 ====> inpublisher: Returns results where the text following this keyword is found in the publisher.</li>
+   <li>type = 4 ===> subject: Returns results where the text following this keyword is listed in the category list of the volume.</li>
+   <li>type = 5 ====>isbn: Returns results where the text following this keyword is the ISBN number.</li>
+   <li>ltype = 6 ====> ccn: Returns results where the text following this keyword is the Library of Congress Control Number.</li>
+   <li>type = 7 ===> oclc: Returns results where the text following this keyword is the Online Computer Library Center number.
+   <li> type = 8 ===> Returns the book which can be downloadable</li>
    </li>
   </ul>
   <p>
@@ -48,7 +49,34 @@
 
 
 </div>
+<h2>Want to search Downloadable Books</h2>
+<p>
+ <div>
+   <code>b=GoogleBook::Book.new(:api_key => "YOUR_GOOOGLE_API_KEY")</code> <br/>
+   <code>b.search('downloadable book name',8)</code>
+ </div>
+</p>
 
+<h2>Filter your Search</h2>
+<p>
+  <div>
+    <ul>
+      <li> filter_type = 1 free-ebooks - Only returns results that are free Google eBooks.</li>
+      <li> filter_type = 2 paid-ebooks - Only returns results that are Google eBooks with a price.</li>
+      <li> filter_type = 3 full - Only returns results where all of the text is viewable.</li>
+      <li> filter_type = 4 ebooks - Only returns results that are Google eBooks, paid or free. 
+      Examples of non-eBooks would be publisher content that is available in limited preview and not for sale, 
+      or magazines.</li>
+    </ul>
+  </div>
+
+  <div>
+    <code>b=GoogleBook::Book.new(:api_key => "YOUR_GOOOGLE_API_KEY")</code><br/>
+    <code>b.filter('ruby language', 1)#here one is <b>filter_type</b> as defined above</code><br/>
+    <span>Now create all books instance as usual</span><br/>
+    <code>b.books</code>
+  </div>
+</p>
 <h2>If you want to access each and every book as an instance of book</h2>
 <p>you can then create a instance of books which was getting by search by following ways</p>
 <div>
