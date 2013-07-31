@@ -23,9 +23,9 @@ describe "base" do
 
   describe "search" do
     
-    it "should  return anything without type" do
-      @con_book.search('Flowers').should_not be_nil
-      @con_book.search('Flowers').should be_a_kind_of(Array)
+    it "should  return anything type" do
+      @con_book.search('flowers',2).should_not be_nil
+      @con_book.search('flowers',2).should be_a_kind_of(Array)
     end
     
     it "should return all books items is eual to the items of the book object" do
