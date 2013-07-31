@@ -1,6 +1,9 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    addressable (2.3.5)
+    crack (0.4.1)
+      safe_yaml (~> 0.9.0)
     diff-lcs (1.2.4)
     rake (10.1.0)
     rspec (2.14.1)
@@ -11,6 +14,10 @@ GEM
     rspec-expectations (2.14.0)
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-mocks (2.14.1)
+    safe_yaml (0.9.4)
+    webmock (1.13.0)
+      addressable (>= 2.2.7)
+      crack (>= 0.3.2)
 
 PLATFORMS
   java
@@ -19,3 +26,4 @@ PLATFORMS
 DEPENDENCIES
   rake
   rspec
+  webmock
