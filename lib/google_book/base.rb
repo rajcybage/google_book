@@ -6,7 +6,7 @@ require_relative 'book_info.rb'
 require_relative 'book_item.rb'
 
 module GoogleBook
-#  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
   class Book
     attr_accessor :api_key, :total_count, :items, :books
@@ -140,7 +140,7 @@ module GoogleBook
         url = main_url+"?q=#{search_param.gsub(/\s+/, "+").strip}&filter=#{filter}&key=#{@api_key}"
       end
       puts "#{url}"
-      return URI(url)
+      return URI.encode(url)
     end
 
     def connect_google(key = nil,type = nil,search_param = nil,filter = nil)
