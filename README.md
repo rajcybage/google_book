@@ -29,13 +29,14 @@
  </code>
  </p>
   <ul>
-   <li> type=1 ===> intitle: Returns results where the text following this keyword is found in the title.</li>
-   <li> type=2  ===> inauthor: Returns results where the text following this keyword is found in the author.</li>
-   <li> type=3 ====> inpublisher: Returns results where the text following this keyword is found in the publisher.</li>
-   <li>type=4 ===> subject: Returns results where the text following this keyword is listed in the category list of the volume.</li>
-   <li>type=5 ====>isbn: Returns results where the text following this keyword is the ISBN number.</li>
-   <li>ltype=6 ====> ccn: Returns results where the text following this keyword is the Library of Congress Control Number.</li>
-   <li>type =7 ===> oclc: Returns results where the text following this keyword is the Online Computer Library Center number.
+   <li> type = 1 ===> intitle: Returns results where the text following this keyword is found in the title.</li>
+   <li> type = 2  ===> inauthor: Returns results where the text following this keyword is found in the author.</li>
+   <li> type = 3 ====> inpublisher: Returns results where the text following this keyword is found in the publisher.</li>
+   <li>type = 4 ===> subject: Returns results where the text following this keyword is listed in the category list of the volume.</li>
+   <li>type = 5 ====>isbn: Returns results where the text following this keyword is the ISBN number.</li>
+   <li>ltype = 6 ====> ccn: Returns results where the text following this keyword is the Library of Congress Control Number.</li>
+   <li>type = 7 ===> oclc: Returns results where the text following this keyword is the Online Computer Library Center number.
+   <li> type = 8 ===> Returns the book which can be downloadable</li>
    </li>
   </ul>
   <p>
@@ -48,7 +49,13 @@
 
 
 </div>
-
+<h2>Want to search Downloadable Books</h2>
+<p>
+ <div>
+   <code>b=GoogleBook::Book.new(:api_key => "YOUR_GOOOGLE_API_KEY")</code> <br/>
+   <code>b.search('downloadable book name',8)</code>
+ </div>
+</p>
 <h2>If you want to access each and every book as an instance of book</h2>
 <p>you can then create a instance of books which was getting by search by following ways</p>
 <div>
