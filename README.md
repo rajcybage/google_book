@@ -8,9 +8,8 @@
 <div>
 	<h2>Installation</h2>
 	<p>In Gemfile
-    <code>gem 'google_book'</code>
-    or
-    <code>gem install google_book</code>
+    <code>gem 'google_book', git: "git@github.com:rajcybage/google_book.git"</code>
+    
 	</p>
 </div>
 <div>
