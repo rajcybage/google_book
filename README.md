@@ -8,13 +8,14 @@
 <div>
 	<h2>Installation</h2>
 	<p>In Gemfile
-    <code>gem 'google_book', git: "git@github.com:rajcybage/google_book.git"</code>
+    <code>gem 'google_book', git: 'git@github.com:rajcybage/google_book.git'</code>
     
 	</p>
 </div>
 <div>
  <h2>System Requirements</h2>
  <code>Ruby >= 1.9.3 or jruby >=1.7.x</code>
+ <code>rails >= 3.0.x</code>
 </div> 
 
 <div>
