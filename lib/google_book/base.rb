@@ -140,12 +140,16 @@ module GoogleBook
         url = main_url+"?q=#{search_param.gsub(/\s+/, "+").strip}&filter=#{filter}&key=#{@api_key}"
       end
       puts "#{url}"
-      return URI.encode(url)
+      return URI(url)
     end
 
     def connect_google(key = nil,type = nil,search_param = nil,filter = nil)
       uri = url_formation(key,type,search_param,filter)
-      response = Net::HTTP.get_response(uri)
+      req = Net::HTTP::Get.new(uri)
+      response = Net::HTTP.start(uri.hostname, uri.port) {|http|
+        http.request(req)
+      }
+      #      response = Net::HTTP.get_response(uri)
       return response.body
     end
   end
