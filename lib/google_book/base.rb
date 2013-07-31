@@ -145,11 +145,7 @@ module GoogleBook
 
     def connect_google(key = nil,type = nil,search_param = nil,filter = nil)
       uri = url_formation(key,type,search_param,filter)
-      req = Net::HTTP::Get.new(uri)
-      response = Net::HTTP.start(uri.hostname, uri.port) {|http|
-        http.request(req)
-      }
-      #      response = Net::HTTP.get_response(uri)
+      response = Net::HTTP.get_response(uri)
       return response.body
     end
   end
