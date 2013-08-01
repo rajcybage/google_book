@@ -53,11 +53,31 @@ class BookItem
   end
 
   def buy_link
-    @item[:item]["saleInfo"]["buyLink"] if @item[:item]["saleInfo"]["isEbook"] == true
+    if buyable?
+      @item[:item]["saleInfo"]["buyLink"]
+    else
+      "your book is not buyable"
+    end
+  end
+
+  def downloadable?
+    unless @item[:item]["accessInfo"]["pdf"].nil?
+      true
+    else
+      false
+    end
+  end
+
+  def buyable?
+    if @item[:item]["saleInfo"]["isEbook"] != true ||  @item[:item]["saleInfo"]["buyLink"].nil?
+      false
+    else
+      true
+    end
   end
 
   def download_link
-    unless @item[:item]["accessInfo"]["pdf"].nil?
+    if downloadable?
       @item[:item]["accessInfo"]["pdf"]["downloadLink"] unless  @item[:item]["accessInfo"]["pdf"]["downloadLink"].nil?
     else
       "your book is not downloadable"
