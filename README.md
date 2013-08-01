@@ -75,10 +75,13 @@
     <code>b.filter('ruby language', 1)#here one is <b>filter_type</b> as defined above</code><br/>
     <span>Now create all books instance as usual</span><br/>
     <code>b.books</code>
-    <span><b>If you select your filter as free ebook then it will be downloadable and buyable</b></span>
-    <code>b.books.first.buy_link</code>
+    <span><b>If you select your filter as free ebook then it will be downloadable and buyable</b></span><br/>
+    
+    <code>b.books.first.downloadable?#check whther the book is downloadable</code><br/>
+    <code>b.books.first.buyable?#check whether the book is buyable</code><br/>
+    <code>b.books.first.buy_link</code><br/>
     <code>b.books.first.download_link</code>
-    <code>b.books.first.buy_link</ciode>
+ 
   </div>
 </p>
 <h2>If you want to access each and every book as an instance of book</h2>
