@@ -90,7 +90,7 @@
    <code>b.search('downloadable book name',<b>9</b>) #type is 9 for only magazines</code>
    <code>b.books #create the magaize instances</code><br/>
    <code>b.books.first.magazine?</code><br/>
-  <span> so on..now get all the info(title,subtitle,author,preview....) of each and every magazine instanaces as stated below</span>
+  <span> so on..now get all the info(title,subtitle,author,preview....) of each and every magazine instanaces as stated above</span>
 </div>
 </p>
 <h2>Filter your Search</h2>
