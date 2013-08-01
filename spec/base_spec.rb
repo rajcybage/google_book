@@ -33,6 +33,18 @@ describe "base" do
     end
   end
 
+  describe "filters" do
+    it "should return results while using diffferent filters" do
+     @con_book.filter('Ruby Language', 1).should_not be_nil
+     @con_book.books.first.buy_link.should_not be_nil
+    end
+
+    it "should also show downloadable books for free_ebook filter" do
+      @con_book.filter('Ruby Language', 1).should_not be_nil
+      @con_book.books.first.download_link.should_not be_nil
+    end
+  end
+
   describe "books" do
     before(:all) do
       @con_book.search('Flowers',2)

@@ -51,4 +51,16 @@ class BookItem
   def web_reader_link
     @item[:item]["accessInfo"]["webReaderLink"]
   end
+
+  def buy_link
+    @item[:item]["saleInfo"]["buyLink"] if @item[:item]["saleInfo"]["isEbook"] == true
+  end
+
+  def download_link
+    unless @item[:item]["accessInfo"]["pdf"].nil?
+      @item[:item]["accessInfo"]["pdf"]["downloadLink"] unless  @item[:item]["accessInfo"]["pdf"]["downloadLink"].nil?
+    else
+      "your book is not downloadable"
+    end
+  end
 end
