@@ -5,6 +5,7 @@
 <body>
 	<h1>Google Book ApI Integration</h1>
 	<br/>
+	<p>You can use it in your web application as well as desktop application to fetch google books</p>
 <div>
 	<h2>Installation</h2>
 	<p>In Gemfile
@@ -54,6 +55,10 @@
  <div>
    <code>b=GoogleBook::Book.new(:api_key => "YOUR_GOOOGLE_API_KEY")</code> <br/>
    <code>b.search('downloadable book name',8)</code>
+   <code>b.books.first.downloadable?#check whther the book is downloadable</code><br/>
+   <code>b.books.first.buyable?#check whether the book is buyable</code><br/>
+   <code>b.books.first.buy_link</code><br/>
+   <code>b.books.first.download_link</code>
  </div>
 </p>
 
@@ -75,6 +80,13 @@
     <code>b.filter('ruby language', 1)#here one is <b>filter_type</b> as defined above</code><br/>
     <span>Now create all books instance as usual</span><br/>
     <code>b.books</code>
+    <span><b>If you select your filter as free ebook then it will be downloadable and buyable</b></span><br/>
+    
+    <code>b.books.first.downloadable?#check whther the book is downloadable</code><br/>
+    <code>b.books.first.buyable?#check whether the book is buyable</code><br/>
+    <code>b.books.first.buy_link</code><br/>
+    <code>b.books.first.download_link</code>
+ 
   </div>
 </p>
 <h2>If you want to access each and every book as an instance of book</h2>
@@ -93,6 +105,6 @@
    <code>b.books.first.small_thumbnail_link #get the first book thumbnail image</code><br/>
 </div>
 
-    <h3>Many other new functionalities are comming soon.....</h3>
+
 </body>
 </html>
