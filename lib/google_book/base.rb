@@ -73,14 +73,14 @@ module GoogleBook
 
     def set_filter_type(type)
       case type.to_i
-        when 1
-          type = "free-ebooks"
-        when 2
-          type = "paid-ebooks"
-        when 3
-          type = "full"
-        else
-         type = "ebooks"
+      when 1
+        type = "free-ebooks"
+      when 2
+        type = "paid-ebooks"
+      when 3
+        type = "full"
+      else
+        type = "ebooks"
       end
     end
 
@@ -122,7 +122,7 @@ module GoogleBook
       when 8
         type = "download"
       when 9
-         type = "magazine"
+        type = "magazine"
       else
         type =  "inauthor"
       end
@@ -132,13 +132,7 @@ module GoogleBook
     def url_formation(api_key = nil,type = nil,search_param = nil, filter = nil)
       main_url = "https://www.googleapis.com/books/v1/volumes"
       if !type.nil?
-        if type == "download"
-          url = main_url+"?q=#{search_param.gsub(/\s+/, "+").strip}&download=epub&key=#{@api_key}"
-       elsif type == "magazine"
-          url = main_url+"?q=#{search_param.gsub(/\s+/, "+").strip}&printType=magazines&key=#{@api_key}"
-        else
-         url = main_url+"?q=#{search_param.gsub(/\s+/, "").strip}+#{type}:keyes&key=#{@api_key}"
-        end
+        url = set_normal_url(api_key, type, search_param, main_url)
       elsif type.nil? && !filter.nil?
         url = main_url+"?q=#{search_param.gsub(/\s+/, "+").strip}&filter=#{filter}&key=#{@api_key}"
       else
@@ -148,13 +142,25 @@ module GoogleBook
       return URI(url)
     end
 
+    def set_normal_url(api_key, type, search_param, main_url)
+      case type
+       when "download"
+        url = main_url+"?q=#{search_param.gsub(/\s+/, "+").strip}&download=epub&key=#{api_key}"
+       when "magazine"
+        url = main_url+"?q=#{search_param.gsub(/\s+/, "+").strip}&printType=magazines&key=#{api_key}"
+       else
+        url = main_url+"?q=#{search_param.gsub(/\s+/, "").strip}+#{type}:keyes&key=#{api_key}"
+      end
+      return url
+    end
+
     def connect_google(key = nil,type = nil,search_param = nil,filter = nil)
       uri = url_formation(key,type,search_param,filter)
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl   = true
       http.verify_mode = OpenSSL::SSL::VERIFY_NONE
       response = http.get(uri.request_uri)
-#      response = Net::HTTP.get_response(uri)
+      #      response = Net::HTTP.get_response(uri)
       return response.body
     end
   end
