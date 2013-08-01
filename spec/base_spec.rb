@@ -31,6 +31,10 @@ describe "base" do
     it "should return all books items is eual to the items of the book object" do
       @con_book.search('Flowers',2).should eq @con_book.items
     end
+    it "should return magazines after giving filter" do
+      @con_book.search('Flowers',9)
+      @con_book.books.first.magazine?.should be_true
+    end
   end
 
   describe "filters" do

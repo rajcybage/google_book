@@ -96,6 +96,7 @@ module GoogleBook
         puts "6)Library of Congress Control Number\n"
         puts "7)By Online Computer Library Center number\n"
         puts "8)Want to search Downloadable book"
+        puts "9)Want to search downloadable Magazines"
         type = gets
       else
         type = "1"
@@ -120,22 +121,28 @@ module GoogleBook
         type = "oclc"
       when 8
         type = "download"
+      when 9
+         type = "magazine"
       else
-        type =  "intitle"          
+        type =  "inauthor"
       end
       return type
     end
 
     def url_formation(api_key = nil,type = nil,search_param = nil, filter = nil)
       main_url = "https://www.googleapis.com/books/v1/volumes"
-      if type != nil
-        unless type == "download"
-          url = main_url+"?q=#{search_param.gsub(/\s+/, "").strip}+#{type}:keyes&key=#{@api_key}"
-        else
+      if !type.nil?
+        if type == "download"
           url = main_url+"?q=#{search_param.gsub(/\s+/, "+").strip}&download=epub&key=#{@api_key}"
+       elsif type == "magazine"
+          url = main_url+"?q=#{search_param.gsub(/\s+/, "+").strip}&printType=magazines&key=#{@api_key}"
+        else
+         url = main_url+"?q=#{search_param.gsub(/\s+/, "").strip}+#{type}:keyes&key=#{@api_key}"
         end
-      else
+      elsif type.nil? && !filter.nil?
         url = main_url+"?q=#{search_param.gsub(/\s+/, "+").strip}&filter=#{filter}&key=#{@api_key}"
+      else
+        url = main_url+"?q=#{search_param.gsub(/\s+/, "+").strip}&key=#{@api_key}"
       end
       puts "#{url}"
       return URI(url)

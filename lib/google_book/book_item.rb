@@ -60,6 +60,14 @@ class BookItem
     end
   end
 
+  def magazine?
+    if @item[:item]["volumeInfo"]["printType"].upcase == "MAGAZINE"
+      true
+    else
+      false
+    end
+  end
+
   def downloadable?
     unless @item[:item]["accessInfo"]["pdf"].nil?
       true
