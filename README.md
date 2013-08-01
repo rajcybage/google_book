@@ -62,6 +62,17 @@
  </div>
 </p>
 
+
+<h2>Want to get Magazines only</h2>
+<p>
+<div>
+   <code>b=GoogleBook::Book.new(:api_key => "YOUR_GOOOGLE_API_KEY")</code> <br/>
+   <code>b.search('downloadable book name',<b>9</b>) #type is 9 for only magazines</code>
+   <code>b.books #create the magaize instances</code><br/>
+   <code>b.books.first.magazine?</code><br/>
+  <span> so on..now get all the info(title,subtitle,author,preview....) of each and every magazine instanaces as stated below</span>
+</div>
+</p>
 <h2>Filter your Search</h2>
 <p>
   <div>
