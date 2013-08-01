@@ -55,6 +55,10 @@
  <div>
    <code>b=GoogleBook::Book.new(:api_key => "YOUR_GOOOGLE_API_KEY")</code> <br/>
    <code>b.search('downloadable book name',8)</code>
+   <code>b.books.first.downloadable?#check whther the book is downloadable</code><br/>
+   <code>b.books.first.buyable?#check whether the book is buyable</code><br/>
+   <code>b.books.first.buy_link</code><br/>
+   <code>b.books.first.download_link</code>
  </div>
 </p>
 
