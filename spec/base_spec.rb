@@ -35,7 +35,7 @@ describe "base" do
 
   describe "books" do
     before(:all) do
-      @con_book.search('Flowers')
+      @con_book.search('Flowers',2)
     end
     it "should create all the books instance" do
       @con_book.books.should be_a_kind_of(Array)

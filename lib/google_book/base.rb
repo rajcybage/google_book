@@ -145,7 +145,11 @@ module GoogleBook
 
     def connect_google(key = nil,type = nil,search_param = nil,filter = nil)
       uri = url_formation(key,type,search_param,filter)
-      response = Net::HTTP.get_response(uri)
+      http = Net::HTTP.new(uri.host, uri.port)
+      http.use_ssl   = true
+      http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+      response = http.get(uri.request_uri)
+#      response = Net::HTTP.get_response(uri)
       return response.body
     end
   end
