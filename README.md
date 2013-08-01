@@ -6,6 +6,7 @@
 
 <div>
 <a href = "https://codeclimate.com/repos/51fa3a5356b102601a00d3e1/feed"><img src="https://codeclimate.com/repos/51fa3a5356b102601a00d3e1/badges/8db2d24d585c3d2ac1f1/gpa.png" /></a>
+<img src="https://api.travis-ci.org/rajcybage/google_book.png"/>
 </div>
 
 <h1>Google Book ApI Integration</h1><br/>
