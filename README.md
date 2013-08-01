@@ -5,6 +5,7 @@
 <body>
 	<h1>Google Book ApI Integration</h1>
 	<br/>
+	<p>You can use it in your web application as well as desktop application to fetch google books</p>
 <div>
 	<h2>Installation</h2>
 	<p>In Gemfile
