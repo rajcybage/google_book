@@ -69,7 +69,7 @@ class BookItem
   end
 
   def downloadable?
-    unless @item[:item]["accessInfo"]["pdf"].nil?
+    unless @item[:item]["accessInfo"]["pdf"].nil? || @item[:item]["accessInfo"]["pdf"]["downloadLink"].nil?
       true
     else
       false
@@ -86,7 +86,7 @@ class BookItem
 
   def download_link
     if downloadable?
-      @item[:item]["accessInfo"]["pdf"]["downloadLink"] unless  @item[:item]["accessInfo"]["pdf"]["downloadLink"].nil?
+      @item[:item]["accessInfo"]["pdf"]["downloadLink"]   
     else
       "your book is not downloadable"
     end
