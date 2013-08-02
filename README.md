@@ -3,15 +3,19 @@
 <title>Google Book API Integration</title>
 </head>
 <body>
-	<h1>Google Book ApI Integration</h1>
-	<br/>
-	<p>You can use it in your web application as well as desktop application to fetch google books</p>
+
 <div>
-	<h2>Installation</h2>
-	<p>In Gemfile
+<a href = "https://codeclimate.com/repos/51fa3a5356b102601a00d3e1/feed"><img src="https://codeclimate.com/repos/51fa3a5356b102601a00d3e1/badges/8db2d24d585c3d2ac1f1/gpa.png" /></a>
+ <a href = "https://travis-ci.org/rajcybage/google_book"><img src= "https://travis-ci.org/rajcybage/google_book.png"/></a>
+</div>
+
+<h1>Google Book ApI Integration</h1><br/>
+<p>You can use it in your web application as well as desktop application to fetch google books</p>
+<div>
+   <h2>Installation</h2>
+    <p>In Gemfile
     <code>gem 'google_book', git: 'git@github.com:rajcybage/google_book.git'</code>
-    
-	</p>
+    </p>
 </div>
 <div>
  <h2>System Requirements</h2>
