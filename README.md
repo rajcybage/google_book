@@ -81,6 +81,8 @@
    <code><b>b.books.first.small_thumbnail_link #get the first book thumbnail image</b></code><br/>
    <h2>If you want to access google checkout for a particular book we can get the link for checkout</h2>
    <code><b>b.books.first.google_checkout_link #get the first book direct google checkout</b></code><br/>
+   <h2>Want ISBN Information</h2><br/>
+   <code><b>b.books.first.ISBN_info #isbn info for first book it will return hash like {:ISBN_10 => "778545"}</b></code>
 </div>
 
 
