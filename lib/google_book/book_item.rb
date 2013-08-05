@@ -8,7 +8,7 @@ class BookItem
     @item = item
   end
 
- # get the title of the book
+  # get the title of the book
   def get_title
     @item[:item]["volumeInfo"]["title"]
   end
@@ -26,6 +26,11 @@ class BookItem
   #The published date of the book
   def publish_date
     @item[:item]["volumeInfo"]["publishedDate"]
+  end
+
+  #The categories of the book
+  def categories
+    @item[:item]["volumeInfo"]["categories"]
   end
 
   #The preview link
@@ -63,9 +68,9 @@ class BookItem
     @item[:item]["accessInfo"]["webReaderLink"]
   end
 
- #text snippet description
+  #text snippet description
   def text_snippet_description
-   @item[:item]["searchInfo"]["textSnippet"] unless @item[:item]["searchInfo"].nil?
+    @item[:item]["searchInfo"]["textSnippet"] unless @item[:item]["searchInfo"].nil?
   end
 
   #checkout link
@@ -80,7 +85,16 @@ class BookItem
 
   #The version of the book
   def version
-   @item[:item]["volumeInfo"]["contentVersion"]
+    @item[:item]["volumeInfo"]["contentVersion"]
+  end
+
+  #ISBN information for the book
+  def ISBN_info
+    isbn_info = @item[:item]["volumeInfo"]["industryIdentifiers"].inject({}) do |result, isbn|
+      result[isbn["type"]] = isbn["identifier"]
+      result
+    end
+    isbn_info
   end
 
   #the total count of the rating
