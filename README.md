@@ -14,8 +14,8 @@
 <div>
    <h2>Installation</h2>
     <p>In Gemfile
-    <code>gem 'google_book', git: 'git@github.com:rajcybage/google_book.git'</code>
-    <span><b>OR</b></span>
+    <code>gem 'google_book', git: 'git@github.com:rajcybage/google_book.git'</code><br/>
+    <span><b>OR</b></span><br/>
     <code>gem 'google_book', '0.3.0'</code>
     </p>
 </div>
