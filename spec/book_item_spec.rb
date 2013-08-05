@@ -36,14 +36,14 @@ describe "book_item" do
    end
 
   describe "preview_link" do
-    it "should return perfect categories" do
+    it "should return perfect preview link" do
       @book_items.first.preview_link.should == "http://books.google.com/books?id=_oG_iTxP1pIC&pg=PA283&dq=Flowers+inauthor:keyes&hl=&cd=1&source=gbs_api"
     end
   end
 
   describe "info_link" do
     it "should return perfect info link" do
-      @book_items.first.info_link.should == "http://books.google.co.in/books?id=F1wgqlNi8AMC&dq=Flowers+inauthor:keyes&hl=&source=gbs_api"
+      @book_items.first.info_link.should == "http://books.google.com/books?id=_oG_iTxP1pIC&dq=Flowers+inauthor:keyes&hl=&source=gbs_api"
     end
   end
 
