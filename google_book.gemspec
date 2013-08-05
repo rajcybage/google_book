@@ -3,7 +3,7 @@ Gem::Specification.new do |s|
   s.name        = 'google_book'
   s.version     = GoogleBook::Version
   s.date        = '2013-08-05'
-  s.summary     = "Google Book API integration"
+  s.summary     = "Google Book API integration for fetching the information for google books and magazines also filter them.You can access most of the element for a particular books and magazines from the google book search. like :-(title,sub title,preview link,authors,publisher,publish date,buylink,downloadlink,version,...many more"
   s.authors     = ["Rajarshi Das"]
   s.license     = "Copyright (c) Rajarshi Das. All rights reserved"
   s.email       = 'rdasarminus@gmail.com'

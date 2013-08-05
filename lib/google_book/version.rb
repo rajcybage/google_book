@@ -1,3 +1,3 @@
 module GoogleBook
-  Version = "0.3.1"
+  Version = "0.3.1.1"
 end
