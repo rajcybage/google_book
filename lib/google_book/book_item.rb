@@ -68,6 +68,10 @@ class BookItem
     end
   end
 
+  def price
+    @item[:item]["saleInfo"]["listPrice"]["amount"].to_s + ' ' + @item[:item]["saleInfo"]["listPrice"]["currencyCode"] unless @item[:item]["saleInfo"]["listPrice"].nil?
+  end
+
   def downloadable?
     unless @item[:item]["accessInfo"]["pdf"].nil? || @item[:item]["accessInfo"]["pdf"]["downloadLink"].nil?
       true
