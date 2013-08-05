@@ -79,6 +79,8 @@
     <code><b>b.price #get the book price with currency</b></code><br/>
    <code><b>b.books.first.thumbnail_image #get the first book thumbnail image</b></code><br/>
    <code><b>b.books.first.small_thumbnail_link #get the first book thumbnail image</b></code><br/>
+   <h2>If you want to access google checkout for a particular book we can get the link for checkout</h2>
+   <code><b>b.books.first.google_checkout_link #get the first book direct google checkout</b></code><br/>
 </div>
 
 
