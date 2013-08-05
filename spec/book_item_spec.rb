@@ -29,4 +29,51 @@ describe "book_item" do
     end
   end
 
+  describe "authors" do
+     it "should return perfect authors name" do
+       @book_items.first.authors.should =~ ["David Rogers", "Daniel Keyes"]
+     end
+   end
+
+  describe "preview_link" do
+    it "should return perfect categories" do
+      @book_items.first.preview_link.should == "http://books.google.co.in/books?id=F1wgqlNi8AMC&pg=PA118&dq=Flowers+inauthor:keyes&hl=&cd=1&source=gbs_api"
+    end
+  end
+
+  describe "info_link" do
+    it "should return perfect info link" do
+      @book_items.first.info_link.should == "http://books.google.co.in/books?id=F1wgqlNi8AMC&dq=Flowers+inauthor:keyes&hl=&source=gbs_api"
+    end
+  end
+
+  describe "version" do
+    it "should return perfect version" do
+      @book_items.first.version.should == "0.0.1.0.preview.1"
+   end
+  end
+
+  describe "google_checkout_link" do
+    it "should return perfect google checkout link" do
+      @book_items.first.google_checkout_link.should == "https://play.google.com/store/books/details?id=F1wgqlNi8AMC&rdid=book-F1wgqlNi8AMC&rdot=1&source=gbs_atb"
+    end
+  end
+
+  describe "rating" do
+    it "should return the rating of the book" do
+      @book_items.first.rating.should == 4.0
+    end
+  end
+
+  describe "publisher" do
+    it "should return right publisher name" do
+      @book_items.first.publisher.should == "Dramatic Publishing"
+    end
+  end
+
+  describe "publish_date" do
+    it "should return the perfect published date" do
+      @book_items.first.publish_date.should == "1997"
+    end
+  end
 end

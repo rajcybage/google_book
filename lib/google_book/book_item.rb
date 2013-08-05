@@ -109,7 +109,7 @@ class BookItem
 
    
   #publish date
-  def publish_date to
+  def publish_date
     @item[:item]["volumeInfo"]["publishedDate"]
   end
 
