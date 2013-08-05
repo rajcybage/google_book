@@ -10,11 +10,11 @@
  <img src = "https://badge.fury.io/rb/google_book.png"/>
 </div>
 
-<h1>Google Book ApI Integration</h1><br/>
-<p>You can use it in your web application as well as desktop application to fetch google books</p>
+<h1>Google Book Api Integration For Books and Magazines</h1><br/>
+<p>You can use it in your web application as well as desktop application to fetch google books and  magazines and also filter them.</p>
 <div>
    <h2>Installation</h2>
-    <p>In Gemfile
+    <p>In Gemfile<br/>
     <code>gem 'google_book', git: 'git@github.com:rajcybage/google_book.git'</code><br/>
     <span><b>OR</b></span><br/>
     <code>gem 'google_book', '0.3.1'</code>
@@ -65,15 +65,19 @@
    <code>b=GoogleBook::Book.new(:api_key => "YOUR_GOOOGLE_API_KEY")</code> <br/>
    <code> b.search("Name of the book you want to search",1)</code> <br/>
    <code>b.books #create the instance of all the books of your search</code><br/>
-   <code>b.books.first.get_title #get the first book title</code><br/>
-   <code>b.books.first.get_sub_title#get the first book sub title</code><br/>
-   <code>b.books.first.authors #get the first book authors</code><br/>
-   <code>b.books.first.text_snippet_description #get the first book text snippet description</code><br/>
-   <code>b.books.first.publish_date #get the first book published date</code><br/>
-   <code>b.books.first.preview_link #get the first book preview link</code><br/>
-   <code>b.books.first.info_link #get the first book information</code><br/>
-   <code>b.books.first.thumbnail_image #get the first book thumbnail image</code><br/>
-   <code>b.books.first.small_thumbnail_link #get the first book thumbnail image</code><br/>
+   <code><b>b.books.first.get_title #get the first book title</b></code><br/>
+   <code><b>b.books.first.get_sub_title#get the first book sub title</b></code><br/>
+   <code><b>b.books.first.authors #get the first book authors</b></code><br/>
+   <code><b>b.books.first.text_snippet_description #get the first book text snippet description</b></code><br/>
+   <code><b>b.books.first.publish_date #get the first book published date</b></code><br/>
+   <code><b>b.books.first.publisher #get the first book publisher name</b></code><br/>
+   <code><b>b.books.first.rating #get the rating of the book</b></code><br/>
+   <code><b>b.books.first.total_rating #get the total rating count of the book</b></code><br/>
+   <code><b>b.books.first.version #get the version of the book</b></code><br/>
+   <code><b>b.books.first.preview_link #get the first book preview link</b></code><br/>
+   <code><b>b.books.first.info_link #get the first book information</b></code><br/>
+   <code><b>b.books.first.thumbnail_image #get the first book thumbnail image</b></code><br/>
+   <code><b>b.books.first.small_thumbnail_link #get the first book thumbnail image</b></code><br/>
 </div>
 
 
