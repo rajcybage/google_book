@@ -52,6 +52,7 @@
    <code>b.book_info.get_all_titles #to get the all titles of your search book</code> <br/> 
    <code>b.book_info.get_all_subtitles # to get all the subtitles of your search book</code>
    <code>b.total_count #get the search results count</code>
+   <code><b>b.price #get the book price with currency</b></code>
    </p>
 
 
