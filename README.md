@@ -10,11 +10,11 @@
  <img src = "https://badge.fury.io/rb/google_book.png"/>
 </div>
 
-<h1>Google Book ApI Integration</h1><br/>
-<p>You can use it in your web application as well as desktop application to fetch google books</p>
+<h1>Google Book ApI Integration For BOOKs and Magazines</h1><br/>
+<p>You can use it in your web application as well as desktop application to fetch google books and  magazines and also filter them.</p>
 <div>
    <h2>Installation</h2>
-    <p>In Gemfile
+    <p>In Gemfile<br/>
     <code>gem 'google_book', git: 'git@github.com:rajcybage/google_book.git'</code><br/>
     <span><b>OR</b></span><br/>
     <code>gem 'google_book', '0.3.1'</code>
