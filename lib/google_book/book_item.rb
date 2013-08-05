@@ -68,9 +68,14 @@ class BookItem
    @item[:item]["searchInfo"]["textSnippet"] unless @item[:item]["searchInfo"].nil?
   end
 
-  #the rating of the book
+  #The rating of the book
   def rating
     @item[:item]["volumeInfo"]["averageRating"]
+  end
+
+  #The version of the book
+  def version
+   @item[:item]["volumeInfo"]["contentVersion"]
   end
 
   #the total count of the rating
@@ -83,8 +88,9 @@ class BookItem
     @item[:item]["volumeInfo"]["publisher"]
   end
 
+   
   #publish date
-  def publish_date
+  def publish_date to
     @item[:item]["volumeInfo"]["publishedDate"]
   end
 
