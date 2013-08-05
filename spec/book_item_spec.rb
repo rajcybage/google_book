@@ -31,13 +31,13 @@ describe "book_item" do
 
   describe "authors" do
      it "should return perfect authors name" do
-       @book_items.first.authors.should =~ ["David Rogers", "Daniel Keyes"]
+       @book_items.first.authors.should =~ ["Daniel Keyes"]
      end
    end
 
   describe "preview_link" do
     it "should return perfect categories" do
-      @book_items.first.preview_link.should == "http://books.google.co.in/books?id=F1wgqlNi8AMC&pg=PA118&dq=Flowers+inauthor:keyes&hl=&cd=1&source=gbs_api"
+      @book_items.first.preview_link.should == "http://books.google.com/books?id=_oG_iTxP1pIC&pg=PA283&dq=Flowers+inauthor:keyes&hl=&cd=1&source=gbs_api"
     end
   end
 
@@ -49,13 +49,13 @@ describe "book_item" do
 
   describe "version" do
     it "should return perfect version" do
-      @book_items.first.version.should == "0.0.1.0.preview.1"
+      @book_items.first.version.should == "0.6.4.0.preview.3"
    end
   end
 
   describe "google_checkout_link" do
     it "should return perfect google checkout link" do
-      @book_items.first.google_checkout_link.should == "https://play.google.com/store/books/details?id=F1wgqlNi8AMC&rdid=book-F1wgqlNi8AMC&rdot=1&source=gbs_atb"
+      @book_items.first.google_checkout_link.should == "https://play.google.com/store/books/details?id=_oG_iTxP1pIC&rdid=book-_oG_iTxP1pIC&rdot=1&source=gbs_atb"
     end
   end
 
@@ -67,13 +67,13 @@ describe "book_item" do
 
   describe "publisher" do
     it "should return right publisher name" do
-      @book_items.first.publisher.should == "Dramatic Publishing"
+      @book_items.first.publisher.should == "Houghton Mifflin Harcourt"
     end
   end
 
   describe "publish_date" do
     it "should return the perfect published date" do
-      @book_items.first.publish_date.should == "1997"
+      @book_items.first.publish_date.should == "2007-12-01"
     end
   end
 end
