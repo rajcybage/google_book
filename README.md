@@ -115,16 +115,16 @@
   </div>
 
   <div>
-    <code>b=GoogleBook::Book.new(:api_key => "YOUR_GOOOGLE_API_KEY")</code><br/>
-    <code>b.filter('ruby language', 1)#here one is <b>filter_type</b> as defined above</code><br/>
+    <code>filter_book=GoogleBook::Book.new(:api_key => "YOUR_GOOOGLE_API_KEY")</code><br/>
+    <code>filter_book.filter('ruby language', 1)#here one is <b>filter_type</b> as defined above</code><br/>
     <span>Now create all books instance as usual</span><br/>
-    <code>b.books</code>
+    <code>filter_book.books</code>
     <span><b>If you select your filter as free ebook then it will be downloadable and buyable</b></span><br/>
     
-    <code>b.books.first.downloadable?#check whther the book is downloadable</code><br/>
-    <code>b.books.first.buyable?#check whether the book is buyable</code><br/>
-    <code>b.books.first.buy_link</code><br/>
-    <code>b.books.first.download_link</code>
+    <code>filter_book.books.first.downloadable?#check whther the book is downloadable</code><br/>
+    <code>filter_book.books.first.buyable?#check whether the book is buyable</code><br/>
+    <code>filter_book.books.first.buy_link</code><br/>
+    <code>filter_book.books.first.download_link</code>
  
   </div>
 </p>
