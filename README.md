@@ -68,6 +68,7 @@
    <code>b.books.first.get_title #get the first book title</code><br/>
    <code>b.books.first.get_sub_title#get the first book sub title</code><br/>
    <code>b.books.first.authors #get the first book authors</code><br/>
+   <code>b.books.first.text_snippet_description #get the first book text snippet description</code><br/>
    <code>b.books.first.publish_date #get the first book published date</code><br/>
    <code>b.books.first.preview_link #get the first book preview link</code><br/>
    <code>b.books.first.info_link #get the first book information</code><br/>
