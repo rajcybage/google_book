@@ -53,7 +53,7 @@
    <code>b.book_info.get_all_titles #to get the all titles of your search book</code> <br/> 
    <code>b.book_info.get_all_subtitles # to get all the subtitles of your search book</code>
    <code>b.total_count #get the search results count</code><br/>
-   <code><b>b.price #get the book price with currency</b></code>
+  
    </p>
 
 
@@ -76,6 +76,7 @@
    <code><b>b.books.first.version #get the version of the book</b></code><br/>
    <code><b>b.books.first.preview_link #get the first book preview link</b></code><br/>
    <code><b>b.books.first.info_link #get the first book information</b></code><br/>
+    <code><b>b.price #get the book price with currency</b></code><br/>
    <code><b>b.books.first.thumbnail_image #get the first book thumbnail image</b></code><br/>
    <code><b>b.books.first.small_thumbnail_link #get the first book thumbnail image</b></code><br/>
 </div>
