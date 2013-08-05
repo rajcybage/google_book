@@ -68,6 +68,26 @@ class BookItem
    @item[:item]["searchInfo"]["textSnippet"] unless @item[:item]["searchInfo"].nil?
   end
 
+  #the rating of the book
+  def rating
+    @item[:item]["volumeInfo"]["averageRating"]
+  end
+
+  #the total count of the rating
+  def total_rating
+    @item[:item]["volumeInfo"]["ratingsCount"]
+  end
+
+  #publisher
+  def publisher
+    @item[:item]["volumeInfo"]["publisher"]
+  end
+
+  #publish date
+  def publish_date
+    @item[:item]["volumeInfo"]["publishedDate"]
+  end
+
   #the buy link of the book
   def buy_link
     if buyable?
