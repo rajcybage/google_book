@@ -68,6 +68,11 @@ class BookItem
    @item[:item]["searchInfo"]["textSnippet"] unless @item[:item]["searchInfo"].nil?
   end
 
+  #checkout link
+  def google_checkout_link
+    "https://play.google.com/store/books/details?id=#{@item[:item]["id"]}&rdid=book-#{@item[:item]["id"]}&rdot=1&source=gbs_atb"
+  end
+
   #The rating of the book
   def rating
     @item[:item]["volumeInfo"]["averageRating"]
