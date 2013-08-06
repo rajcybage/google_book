@@ -17,7 +17,7 @@
     <p>In Gemfile<br/>
     <code>gem 'google_book', git: 'git@github.com:rajcybage/google_book.git'</code><br/>
     <span><b>OR</b></span><br/>
-    <code>gem 'google_book', '0.3.3'</code>
+    <code>gem 'google_book', '0.3.4'</code>
     </p>
 </div>
 <div>
