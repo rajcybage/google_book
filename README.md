@@ -140,5 +140,18 @@
 </p>
 
 
+<div>
+  <h2>If You want to get the book shelves of a particular user</h2>
+  <div>
+    <code>bs=BookShelves.new("GOGLE_BOOKS_USER_ID")</code><br/>
+    <code>bs.items #all the book shelves of that user in a hash format</code><br/>
+    <code>bs.items.first["title"] #the title of the books shelve first</code><br/>
+    
+  </div>
+<p>
+
+</p>
+</div>
+
 </body>
 </html>
