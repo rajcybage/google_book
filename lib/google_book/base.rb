@@ -1,8 +1,14 @@
+require 'uri'
+require 'net/http'
+require 'openssl'
+require 'json'
+
 require_relative 'book_info.rb'
 require_relative 'book_item.rb'
-
+require_relative 'uri.rb'
 module GoogleBook
   class Book
+    include URI
     attr_accessor :api_key, :total_count, :items, :books
 
     def initialize(api_key)
@@ -147,17 +153,9 @@ module GoogleBook
 
     def connect_google(key = nil,type = nil,search_param = nil,filter = nil)
       uri = url_formation(key,type,search_param,filter)
-      coonect_uri(uri)
+      uri=URI::Uri.new(uri)
       #      response = Net::HTTP.get_response(uri)
-      return response.body
-    end
-    class << self
-      def connect_uri(uri)
-        http = Net::HTTP.new(uri.host, uri.port)
-        http.use_ssl   = true
-        http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-        response = http.get(uri.request_uri)
-      end
+      return uri.response.body
     end
   end
 end
