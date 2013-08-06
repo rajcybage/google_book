@@ -153,7 +153,9 @@
   <p>
     <h2>If you want the books of a particular Book shelves</h2>
      <b><code>bs.bookshelves.first.books#get all the books of that book shelves</code></b><br/>
+     <b><code>bs.bookshelves.first.books.first.get_title</code></b><br/>
      <b>Now you can access all the methods of those books(ex:-get_title,preview_link....etc) </b>
+     
   </p>
 </div>
 
