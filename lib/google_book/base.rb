@@ -1,7 +1,3 @@
-require 'uri'
-require 'net/http'
-require 'openssl'
-require 'json'
 require_relative 'book_info.rb'
 require_relative 'book_item.rb'
 
@@ -53,11 +49,6 @@ module GoogleBook
       return @books
     end
     
-    #use for rails application
-    def api_key
-      @api_key = YAML.load_file("#{Rails.root}/config/api_key_google_book.yml")[Rails.env]
-    end
-
     def checking_filter_type(type)
       if type.nil?
         puts "How you want to filter your search?(example:1)?"
@@ -144,11 +135,11 @@ module GoogleBook
 
     def set_normal_url(api_key, type, search_param, main_url)
       case type
-       when "download"
+      when "download"
         url = main_url+"?q=#{search_param.gsub(/\s+/, "+").strip}&download=epub&key=#{api_key}"
-       when "magazine"
+      when "magazine"
         url = main_url+"?q=#{search_param.gsub(/\s+/, "+").strip}&printType=magazines&key=#{api_key}"
-       else
+      else
         url = main_url+"?q=#{search_param.gsub(/\s+/, "").strip}+#{type}:keyes&key=#{api_key}"
       end
       return url
@@ -156,12 +147,17 @@ module GoogleBook
 
     def connect_google(key = nil,type = nil,search_param = nil,filter = nil)
       uri = url_formation(key,type,search_param,filter)
-      http = Net::HTTP.new(uri.host, uri.port)
-      http.use_ssl   = true
-      http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-      response = http.get(uri.request_uri)
+      coonect_uri(uri)
       #      response = Net::HTTP.get_response(uri)
       return response.body
+    end
+    class << self
+      def connect_uri(uri)
+        http = Net::HTTP.new(uri.host, uri.port)
+        http.use_ssl   = true
+        http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+        response = http.get(uri.request_uri)
+      end
     end
   end
 end

@@ -7,6 +7,6 @@ Gem::Specification.new do |s|
   s.authors     = ["Rajarshi Das"]
   s.license     = "Copyright (c) Rajarshi Das. All rights reserved"
   s.email       = 'rdasarminus@gmail.com'
-  s.files       = ["README.md","Gemfile","Rakefile", "spec/base_spec.rb","spec/book_item_spec.rb", "lib/google_book.rb", "lib/google_book/base.rb", "lib/google_book/book_info.rb", "lib/google_book/book_item.rb"]
+  s.files       = ["README.md","Gemfile","Rakefile", "spec/base_spec.rb","spec/book_item_spec.rb", "lib/google_book.rb", "lib/google_book/base.rb", "lib/google_book/book_info.rb", "lib/google_book/book_item.rb", "lib/google_book/book_shelves.rb"]
   s.homepage    = 'https://github.com/rajcybage/google_book'
 end
