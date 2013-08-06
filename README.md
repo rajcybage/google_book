@@ -10,7 +10,7 @@
  <img src = "https://badge.fury.io/rb/google_book.png"/>
 </div>
 
-<h1>Google Book Api Integration For Books and Magazines</h1><br/>
+<h1>Google Book Api Integration For Books and Magazines and Book Shelves</h1><br/>
 <p>You can use it in your web application as well as desktop application to fetch google books and  magazines and also filter them.</p>
 <div>
    <h2>Installation</h2>
@@ -143,14 +143,18 @@
 <div>
   <h2>If You want to get the book shelves of a particular user</h2>
   <div>
-    <code>bs=BookShelves.new("GOGLE_BOOKS_USER_ID")</code><br/>
-    <code>bs.items #all the book shelves of that user in a hash format</code><br/>
-    <code>bs.items.first["title"] #the title of the books shelve first</code><br/>
-    
+    <b>
+     <code>bs=BookShelves.new("GOGLE_BOOKS_USER_ID")</code><br/>
+     <code>bs.bookshelves #all the book shelves of that user in a instance</code><br/>
+     <code>bs.bookshelves.first.title #the title of the books shelve first</code><br/>
+     <code>bs.bookshelves.first.self_link #the title of the books shelve first</code><br/>
+    </b>
   </div>
-<p>
-
-</p>
+  <p>
+    <h2>If you want the books of a particular Book shelves</h2>
+     <b><code>bs.bookshelves.first.books#get all the books of that book shelves</code></b>
+     <b>Now you can access all the methods of those books(ex:-get_title,preview_link....etc) </b>
+  </p>
 </div>
 
 </body>
