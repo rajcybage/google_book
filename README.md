@@ -11,7 +11,7 @@
 </div>
 
 <h1>Google Book Api Integration For Books and Magazines and Book Shelves</h1><br/>
-<p>You can use it in your web application as well as desktop application to fetch google books and  magazines and also filter them.</p>
+<p>Google Book API integration for fetching the information for google books and magazines and book shelves also filter them. You can eaisly get most of the elements for a particular book and magazine or the books of a book shelf from the google book search. like :-(title,sub title,preview link,authors,publisher,publish date,buylink,downloadlink,version,ISBN information,ratings,...many more..Also you can get the google checkout link for that book/magazine</p>
 <div>
    <h2>Installation</h2>
     <p>In Gemfile<br/>
