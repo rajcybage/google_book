@@ -1,4 +1,5 @@
 require 'net/http'
+require 'openssl'
 module URI
   class Uri
     attr_reader :uri
