@@ -37,7 +37,7 @@ describe "book_item" do
 
   describe "preview_link" do
     it "should return perfect preview link" do
-      @book_items.first.preview_link.should == "http://books.google.com/books?id=_oG_iTxP1pIC&pg=PA283&dq=Flowers+inauthor:keyes&hl=&cd=1&source=gbs_api"
+      @book_items.first.preview_link.should == "http://books.google.com/books?id=_oG_iTxP1pIC&printsec=frontcover&dq=Flowers+inauthor:keyes&hl=&cd=1&source=gbs_api"
     end
   end
 
