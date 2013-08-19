@@ -1,5 +1,5 @@
 require_relative 'base.rb'
-require_relative 'book_item.rb'
+
 class BookInfo 
   attr_accessor :items, :titles, :subtitles, :book
   @titles = []
@@ -29,7 +29,7 @@ class BookInfo
 
   private
   def show_all_titles_and_subtitles(flag)
-    @items[:items].each do |item|
+    @items[:items].inject do |item|
       @titles << item["volumeInfo"]["title"]
     end
   end

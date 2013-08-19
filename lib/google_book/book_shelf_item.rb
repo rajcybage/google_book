@@ -1,4 +1,4 @@
-require_relative 'book_info.rb'
+require_relative 'book_item.rb'
 require_relative 'base.rb'
 require_relative 'uri.rb'
 

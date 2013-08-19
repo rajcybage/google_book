@@ -1,4 +1,3 @@
-require_relative 'book_info.rb'
 require_relative 'base.rb'
 
 class BookItem
