@@ -15,7 +15,7 @@
 <div>
    <h2>Installation</h2>
     <p>In Gemfile<br/>
-      <code>gem 'google_book', '0.3.12'</code>
+      <code>gem 'google_book', '0.3.13'</code>
     </p>
 </div>
 <div>
