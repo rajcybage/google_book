@@ -8,6 +8,8 @@
  <a href = "https://codeclimate.com/repos/51fa3a5356b102601a00d3e1/feed"><img src="https://codeclimate.com/repos/51fa3a5356b102601a00d3e1/badges/8db2d24d585c3d2ac1f1/gpa.png" /></a>
  <a href = "https://travis-ci.org/rajcybage/google_book"><img src= "https://travis-ci.org/rajcybage/google_book.png?branch=master"/></a>
  <img src = "https://badge.fury.io/rb/google_book.png"/>
+ 
+ <div rel="tooltip" id="project_status_wrapper" data-original-title="Copy badge url to clipboard"><a href="#"><img src="https://gemnasium.com/rajcybage/google_book.png" id="project_status" alt="Google_book"></a></div>
 </div>
 
 <h1>Google Book Api Integration For Books and Magazines and Book Shelves</h1><br/>
