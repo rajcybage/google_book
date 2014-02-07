@@ -31,49 +31,44 @@ describe "book_item" do
 
   describe "authors" do
      it "should return perfect authors name" do
-       @book_items.first.authors.should =~ ["Daniel Keyes"]
+      @book_items.first.authors.include?("Daniel Keyes").should be_true
      end
    end
 
   describe "preview_link" do
     it "should return perfect preview link" do
-      @book_items.first.preview_link.should == "http://books.google.com/books?id=_oG_iTxP1pIC&pg=PA224&dq=Flowers+inauthor:keyes&hl=&cd=1&source=gbs_api"
+      @book_items.first.preview_link.should == "http://books.google.com/books?id=P6xj0ICxLngC&pg=PT305&dq=Flowers+inauthor&hl=&cd=1&source=gbs_api"
     end
   end
 
   describe "info_link" do
     it "should return perfect info link" do
-      @book_items.first.info_link.should == "http://books.google.com/books?id=_oG_iTxP1pIC&dq=Flowers+inauthor:keyes&hl=&source=gbs_api"
+      @book_items.first.info_link.should == "http://books.google.com/books?id=P6xj0ICxLngC&dq=Flowers+inauthor&hl=&source=gbs_api"
     end
   end
 
   describe "version" do
     it "should return perfect version" do
-      @book_items.first.version.should == "0.6.4.0.preview.3"
+      @book_items.first.version.should == "preview-1.0.0"
    end
   end
 
   describe "google_checkout_link" do
     it "should return perfect google checkout link" do
-      @book_items.first.google_checkout_link.should == "https://play.google.com/store/books/details?id=_oG_iTxP1pIC&rdid=book-_oG_iTxP1pIC&rdot=1&source=gbs_atb"
+      @book_items.first.google_checkout_link.should == "https://play.google.com/store/books/details?id=P6xj0ICxLngC&rdid=book-P6xj0ICxLngC&rdot=1&source=gbs_atb"
     end
-  end
-
-  describe "rating" do
-    it "should return the rating of the book" do
-      @book_items.first.rating.should == 4.0
-    end
+   end
   end
 
   describe "publisher" do
     it "should return right publisher name" do
-      @book_items.first.publisher.should == "Houghton Mifflin Harcourt"
+      @book_items.first.publisher.should == "Texas A&M University Press"
     end
   end
 
   describe "publish_date" do
     it "should return the perfect published date" do
-      @book_items.first.publish_date.should == "2007-12-01"
+      @book_items.first.publish_date.should == "2009-10-12"
     end
   end
 end
