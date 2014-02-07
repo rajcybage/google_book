@@ -29,12 +29,6 @@ describe "book_item" do
     end
   end
 
-  describe "authors" do
-    it "should return perfect authors name" do
-      @book_items.first.authors.include?("Daniel Keyes").should be_true
-    end
-  end
-
   describe "preview_link" do
     it "should return perfect preview link" do
       @book_items.first.preview_link.should == "http://books.google.com/books?id=P6xj0ICxLngC&pg=PT305&dq=Flowers+inauthor&hl=&cd=1&source=gbs_api"
@@ -60,15 +54,4 @@ describe "book_item" do
   end
 end
 
-describe "publisher" do
-  it "should return right publisher name" do
-    @book_items.first.publisher.should == "Texas A&M University Press"
-  end
-end
-
-describe "publish_date" do
-  it "should return the perfect published date" do
-    @book_items.first.publish_date.should == "2009-10-12"
-  end
-end
 
