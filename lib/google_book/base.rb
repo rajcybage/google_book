@@ -131,9 +131,9 @@ module GoogleBook
       if !type.nil?
         url = set_normal_url(api_key, type, search_param, main_url)
       elsif type.nil? && !filter.nil?
-        url = main_url+"?q=#{search_param.gsub(/\s+/, "+").strip}&filter=#{filter}&key=#{@api_key}"
+        url = main_url+"?q=#{search_param.gsub(/\s+/, "+").strip}&filter=#{filter}"
       else
-        url = main_url+"?q=#{search_param.gsub(/\s+/, "+").strip}&key=#{@api_key}"
+        url = main_url+"?q=#{search_param.gsub(/\s+/, "+").strip}"
       end
       puts "#{url}"
       return URI(url)
@@ -142,11 +142,11 @@ module GoogleBook
     def set_normal_url(api_key, type, search_param, main_url)
       case type
       when "download"
-        url = main_url+"?q=#{search_param.gsub(/\s+/, "+").strip}&download=epub&key=#{api_key}"
+        url = main_url+"?q=#{search_param.gsub(/\s+/, "+").strip}&download=epub"
       when "magazine"
-        url = main_url+"?q=#{search_param.gsub(/\s+/, "+").strip}&printType=magazines&key=#{api_key}"
+        url = main_url+"?q=#{search_param.gsub(/\s+/, "+").strip}&printType=magazines"
       else
-        url = main_url+"?q=#{search_param.gsub(/\s+/, "").strip}+#{type}:keyes&key=#{api_key}"
+        url = main_url+"?q=#{search_param.gsub(/\s+/, "").strip}+#{type}:keyes"
       end
       return url
     end
