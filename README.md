@@ -158,5 +158,16 @@
   </p>
 </div>
 
+<div>
+<h1>Contributing</h1>
+
+<p>Fork it</p>
+<p>Create your feature branch (git checkout -b my-new-feature)</p>
+<p>Commit your changes (git commit -am 'Add some feature')</p>
+<p>Push to the branch (git push origin my-new-feature)</p>
+<p>Create new Pull Request</p>
+
+</div>
+
 </body>
 </html>
