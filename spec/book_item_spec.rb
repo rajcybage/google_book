@@ -30,10 +30,10 @@ describe "book_item" do
   end
 
   describe "authors" do
-     it "should return perfect authors name" do
+    it "should return perfect authors name" do
       @book_items.first.authors.include?("Daniel Keyes").should be_true
-     end
-   end
+    end
+  end
 
   describe "preview_link" do
     it "should return perfect preview link" do
@@ -50,25 +50,25 @@ describe "book_item" do
   describe "version" do
     it "should return perfect version" do
       @book_items.first.version.should == "preview-1.0.0"
-   end
+    end
   end
 
   describe "google_checkout_link" do
     it "should return perfect google checkout link" do
       @book_items.first.google_checkout_link.should == "https://play.google.com/store/books/details?id=P6xj0ICxLngC&rdid=book-P6xj0ICxLngC&rdot=1&source=gbs_atb"
     end
-   end
-  end
-
-  describe "publisher" do
-    it "should return right publisher name" do
-      @book_items.first.publisher.should == "Texas A&M University Press"
-    end
-  end
-
-  describe "publish_date" do
-    it "should return the perfect published date" do
-      @book_items.first.publish_date.should == "2009-10-12"
-    end
   end
 end
+
+describe "publisher" do
+  it "should return right publisher name" do
+    @book_items.first.publisher.should == "Texas A&M University Press"
+  end
+end
+
+describe "publish_date" do
+  it "should return the perfect published date" do
+    @book_items.first.publish_date.should == "2009-10-12"
+  end
+end
+
