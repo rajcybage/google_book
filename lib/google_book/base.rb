@@ -103,7 +103,7 @@ module GoogleBook
     def set_type(type)
       case type.to_i
       when 1
-        type = "intitle"
+        type = nil
       when 2
         type = "inauthor"
       when 3
@@ -146,7 +146,7 @@ module GoogleBook
       when "magazine"
         url = main_url+"?q=#{search_param.gsub(/\s+/, "+").strip}&printType=magazines"
       else
-        url = main_url+"?q=#{search_param.gsub(/\s+/, "").strip}+#{type}:keyes"
+        url = main_url+"?q=#{search_param.gsub(/\s+/, "").strip}+#{type}"
       end
       return url
     end
