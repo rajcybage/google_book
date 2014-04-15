@@ -136,6 +136,7 @@ module GoogleBook
         url = main_url+"?q=#{search_param.gsub(/\s+/, "+").strip}"
       end
       puts "#{url}"
+      url = url + "&maxResults=40"
       return URI(url)
     end
 
@@ -148,7 +149,7 @@ module GoogleBook
       else
         url = main_url+"?q=#{search_param.gsub(/\s+/, "").strip}+#{type}"
       end
-      return url
+      return url + "&maxResults=40"
     end
 
     def connect_google(key = nil,type = nil,search_param = nil,filter = nil)
