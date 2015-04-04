@@ -123,7 +123,7 @@ module GoogleBook
       else
         type =  "inauthor"
       end
-      return type
+      type
     end
 
     def url_formation(api_key = nil,type = nil,search_param = nil, filter = nil)
@@ -137,7 +137,7 @@ module GoogleBook
       end
       puts "#{url}"
       url = url + "&maxResults=40"
-      return URI(url)
+      URI(url)
     end
 
     def set_normal_url(api_key, type, search_param, main_url)
@@ -149,14 +149,14 @@ module GoogleBook
       else
         url = main_url+"?q=#{search_param.gsub(/\s+/, "").strip}+#{type}"
       end
-      return url + "&maxResults=40"
+      url + "&maxResults=40"
     end
 
     def connect_google(key = nil,type = nil,search_param = nil,filter = nil)
       uri = url_formation(key,type,search_param,filter)
       uri=URI::Uri.new(uri)
       #      response = Net::HTTP.get_response(uri)
-      return uri.response.body
+      uri.response.body
     end
   end
 end
