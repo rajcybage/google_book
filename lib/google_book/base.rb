@@ -52,7 +52,7 @@ module GoogleBook
       @items.each do |item|
         @books << BookItem.new(item: item)
       end
-      return @books
+      @books
     end
     
     def checking_filter_type(type)
